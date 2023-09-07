@@ -43,6 +43,13 @@ export default class NumericInput extends Component {
     calcSize = create({ width, height });
   };
   inc = () => {
+    if (
+      this.props.timeBetweenPress &&
+      Date.now() - this.changeQuantityButtonRef.current <
+        this.props.timeBetweenPress
+    ) {
+      return;
+    }
     this.changeQuantityButtonRef.current = Date.now();
     let value =
       this.props.value && typeof this.props.value === "number"
@@ -65,6 +72,13 @@ export default class NumericInput extends Component {
       this.props.onChange && this.props.onChange(Number(value));
   };
   dec = () => {
+    if (
+      this.props.timeBetweenPress &&
+      Date.now() - this.changeQuantityButtonRef.current <
+        this.props.timeBetweenPress
+    ) {
+      return;
+    }
     this.changeQuantityButtonRef.current = Date.now();
     let value =
       this.props.value && typeof this.props.value === "number"
@@ -401,16 +415,7 @@ export default class NumericInput extends Component {
     else
       return (
         <View style={inputContainerStyle}>
-          <Button
-            disable={
-              this.props.timeBetweenPress
-                ? Date.now() - this.changeQuantityButtonRef.current <
-                  this.props.timeBetweenPress
-                : false
-            }
-            onPress={this.dec}
-            style={leftButtonStyle}
-          >
+          <Button onPress={this.dec} style={leftButtonStyle}>
             <Icon
               name="md-remove"
               size={fontSize}
@@ -436,16 +441,7 @@ export default class NumericInput extends Component {
               onFocus={this.onFocus}
             />
           </View>
-          <Button
-            disable={
-              this.props.timeBetweenPress
-                ? Date.now() - this.changeQuantityButtonRef.current <
-                  this.props.timeBetweenPress
-                : false
-            }
-            onPress={this.inc}
-            style={rightButtonStyle}
-          >
+          <Button onPress={this.inc} style={rightButtonStyle}>
             <Icon
               name="md-add"
               size={fontSize}

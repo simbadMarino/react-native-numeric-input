@@ -1,6 +1,6 @@
 {
-  "name": "react-native-numeric-input",
-  "version": "1.9.1",
+  "name": "diva-mobile-numeric-input",
+  "version": "1.0.1",
   "description": "a stylish numeric input for react native",
   "main": "index.js",
   "scripts": {
@@ -20,17 +20,14 @@
     "input",
     "numeric"
   ],
-  "author": {
-    "name": "omri himelbrand",
-    "email": "himelbrand@gmail.com"
-  },
+  "author": "Onur Kantar <onur.kantar@logo.com.tr>",
   "homepage": "https://github.com/himelbrand/react-native-numeric-input",
   "bugs": {
-    "url": "https://github.com/himelbrand/react-native-numeric-input/issues"
+    "url": "https://github.com/onurkantar/diva-mobile-numeric-input/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/himelbrand/react-native-numeric-input.git"
+    "url": "git://github.com/onurkantar/diva-mobile-numeric-input.git"
   },
   "license": "MIT",
   "dependencies": {
@@ -39,5 +36,7 @@
   },
   "peerDependencies": {
     "react-native-vector-icons": "^9.*"
-  }
+  },
+  "types": "./index.d.ts",
+  "devDependencies": {}
 }
