@@ -1,6 +1,6 @@
 {
   "name": "diva-mobile-numeric-input",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "a stylish numeric input for react native",
   "main": "index.js",
   "scripts": {
@@ -21,7 +21,7 @@
     "numeric"
   ],
   "author": "Onur Kantar <onur.kantar@logo.com.tr>",
-  "homepage": "https://github.com/himelbrand/react-native-numeric-input",
+  "homepage": "https://github.com/onurkantar/diva-mobile-numeric-input",
   "bugs": {
     "url": "https://github.com/onurkantar/diva-mobile-numeric-input/issues"
   },
