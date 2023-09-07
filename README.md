@@ -1,4 +1,4 @@
-# react-native-numeric-input
+# diva-mobile-numeric-input
 
 a cross platform stylish numeric input for react native
 
@@ -22,33 +22,33 @@ v1.0.1
 #### if you have react-native-vector-icons installed in your project
 
 ```bash
-yarn add react-native-numeric-input
+yarn add diva-mobile-numeric-input
 ```
 
 or with npm
 
 ```bash
-npm install react-native-numeric-input --save
+npm install diva-mobile-numeric-input --save
 ```
 
 #### if you don't have react-native-vector-icons installed in your project
 
 ```bash
-yarn add react-native-numeric-input react-native-vector-icons
+yarn add diva-mobile-numeric-input react-native-vector-icons
 react-native link
 ```
 
 or with npm
 
 ```bash
-npm install react-native-numeric-input react-native-vector-icons --save
+npm install diva-mobile-numeric-input react-native-vector-icons --save
 react-native link
 ```
 
 if you're experiencing issues with `react-native link` which is used to install react-native-vector-icons
 please refer to [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons) to see manual installation steps
 
-[link to npm page](https://www.npmjs.com/package/react-native-numeric-input)
+[link to npm page](https://www.npmjs.com/package/diva-mobile-numeric-input)
 
 ## Responsive default size
 
@@ -65,7 +65,7 @@ so you can create your own responsive size function and use it to set your custo
 ### import Component
 
 ```javascript
-import NumericInput from "react-native-numeric-input";
+import NumericInput from "diva-mobile-numeric-input";
 ```
 
 ### Basic Usage
@@ -162,7 +162,7 @@ import NumericInput from "react-native-numeric-input";
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/himelbrand/react-native-numeric-input/tags).
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/onurkantar/diva-mobile-numeric-input/tags).
 
 ## License
 
