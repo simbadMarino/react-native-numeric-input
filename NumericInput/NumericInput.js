@@ -43,6 +43,7 @@ export default class NumericInput extends Component {
     calcSize = create({ width, height });
   };
   inc = () => {
+    this.changeQuantityButtonRef.current = Date.now();
     let value =
       this.props.value && typeof this.props.value === "number"
         ? this.props.value
@@ -64,6 +65,7 @@ export default class NumericInput extends Component {
       this.props.onChange && this.props.onChange(Number(value));
   };
   dec = () => {
+    this.changeQuantityButtonRef.current = Date.now();
     let value =
       this.props.value && typeof this.props.value === "number"
         ? this.props.value
@@ -399,7 +401,16 @@ export default class NumericInput extends Component {
     else
       return (
         <View style={inputContainerStyle}>
-          <Button onPress={this.dec} style={leftButtonStyle}>
+          <Button
+            disable={
+              this.props.timeBetweenPress
+                ? Date.now() - this.changeQuantityButtonRef.current <
+                  this.props.timeBetweenPress
+                : false
+            }
+            onPress={this.dec}
+            style={leftButtonStyle}
+          >
             <Icon
               name="md-remove"
               size={fontSize}
@@ -425,7 +436,16 @@ export default class NumericInput extends Component {
               onFocus={this.onFocus}
             />
           </View>
-          <Button onPress={this.inc} style={rightButtonStyle}>
+          <Button
+            disable={
+              this.props.timeBetweenPress
+                ? Date.now() - this.changeQuantityButtonRef.current <
+                  this.props.timeBetweenPress
+                : false
+            }
+            onPress={this.inc}
+            style={rightButtonStyle}
+          >
             <Icon
               name="md-add"
               size={fontSize}
