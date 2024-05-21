@@ -426,21 +426,15 @@ export default class NumericInput extends Component {
               ]}
             />
           </Button>
-          <View style={[inputWraperStyle]}>
-            <TextInput
-              {...this.props.extraTextInputProps}
-              editable={editable}
-              returnKeyType="done"
-              underlineColorAndroid="rgba(0,0,0,0)"
-              keyboardType="numeric"
-              value={this.state.stringValue}
-              onChangeText={this.onChange}
-              style={inputStyle}
+          <TouchableOpacity style={[inputWraperStyle]}>
+            <Text
+              style={[inputStyle,{textAlignVertical:"center"}]}
               ref={(ref) => (this.ref = ref)}
-              onBlur={this.onBlur}
-              onFocus={this.onFocus}
-            />
-          </View>
+              onPress={()=>{
+                this.props?.inputOnPress ? this.props.inputOnPress() : null
+              }}
+            >{this.state.stringValue}</Text>
+          </TouchableOpacity>
           <Button onPress={this.inc} style={rightButtonStyle}>
             <Icon
               name="md-add"
