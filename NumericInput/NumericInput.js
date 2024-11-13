@@ -1,5 +1,11 @@
 import React, { Component } from "react";
-import { View, TextInput, StyleSheet, Text,TouchableOpacity} from "react-native";
+import {
+  View,
+  TextInput,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+} from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
 import Button from "../Button";
 import PropTypes from "prop-types";
@@ -43,6 +49,10 @@ export default class NumericInput extends Component {
     calcSize = create({ width, height });
   };
   inc = () => {
+    if (this.props.leadingCallback) {
+      this.props.leadingCallback();
+    }
+
     if (
       this.props.timeBetweenPress &&
       Date.now() - this.changeQuantityButtonRef.current <
@@ -72,6 +82,9 @@ export default class NumericInput extends Component {
       this.props.onChange && this.props.onChange(Number(value));
   };
   dec = () => {
+    if (this.props.leadingCallback) {
+      this.props.leadingCallback();
+    }
     if (
       this.props.timeBetweenPress &&
       Date.now() - this.changeQuantityButtonRef.current <
@@ -428,12 +441,14 @@ export default class NumericInput extends Component {
           </Button>
           <TouchableOpacity style={[inputWraperStyle]}>
             <Text
-              style={[inputStyle,{textAlignVertical:"center"}]}
+              style={[inputStyle, { textAlignVertical: "center" }]}
               ref={(ref) => (this.ref = ref)}
-              onPress={()=>{
-                this.props?.inputOnPress ? this.props.inputOnPress() : null
+              onPress={() => {
+                this.props?.inputOnPress ? this.props.inputOnPress() : null;
               }}
-            >{this.state.stringValue}</Text>
+            >
+              {this.state.stringValue}
+            </Text>
           </TouchableOpacity>
           <Button onPress={this.inc} style={rightButtonStyle}>
             <Icon
