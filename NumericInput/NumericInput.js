@@ -56,7 +56,7 @@ export default class NumericInput extends Component {
     if (
       this.props.timeBetweenPress &&
       Date.now() - this.changeQuantityButtonRef.current <
-        this.props.timeBetweenPress
+      this.props.timeBetweenPress
     ) {
       return;
     }
@@ -88,7 +88,7 @@ export default class NumericInput extends Component {
     if (
       this.props.timeBetweenPress &&
       Date.now() - this.changeQuantityButtonRef.current <
-        this.props.timeBetweenPress
+      this.props.timeBetweenPress
     ) {
       return;
     }
@@ -125,7 +125,7 @@ export default class NumericInput extends Component {
     value &&
     value.match(/-?\d+(\.(\d+)?)?/) &&
     value.match(/-?\d+(\.(\d+)?)?/)[0] ===
-      value.match(/-?\d+(\.(\d+)?)?/).input;
+    value.match(/-?\d+(\.(\d+)?)?/).input;
 
   intMatch = (value) =>
     value &&
@@ -270,53 +270,53 @@ export default class NumericInput extends Component {
     const inputContainerStyle =
       this.props.type === "up-down"
         ? [
-            style.inputContainerUpDown,
-            {
-              width: totalWidth,
-              height: totalHeight,
-              borderColor: borderColor,
-            },
-            this.props.rounded ? { borderRadius: borderRadiusTotal } : {},
-            this.props.containerStyle,
-          ]
+          style.inputContainerUpDown,
+          {
+            width: totalWidth,
+            height: totalHeight,
+            borderColor: borderColor,
+          },
+          this.props.rounded ? { borderRadius: borderRadiusTotal } : {},
+          this.props.containerStyle,
+        ]
         : [
-            style.inputContainerPlusMinus,
-            {
-              width: totalWidth,
-              height: totalHeight,
-              borderColor: borderColor,
-            },
-            this.props.rounded ? { borderRadius: borderRadiusTotal } : {},
-            this.props.containerStyle,
-          ];
+          style.inputContainerPlusMinus,
+          {
+            width: totalWidth,
+            height: totalHeight,
+            borderColor: borderColor,
+          },
+          this.props.rounded ? { borderRadius: borderRadiusTotal } : {},
+          this.props.containerStyle,
+        ];
     const inputStyle =
       this.props.type === "up-down"
         ? [
-            style.inputUpDown,
-            {
-              width: inputWidth,
-              height: totalHeight,
-              fontSize: fontSize,
-              color: textColor,
-              borderRightWidth: 2,
-              borderRightColor: borderColor,
-            },
-            this.props.inputStyle,
-          ]
+          style.inputUpDown,
+          {
+            width: inputWidth,
+            height: totalHeight,
+            fontSize: fontSize,
+            color: textColor,
+            borderRightWidth: 2,
+            borderRightColor: borderColor,
+          },
+          this.props.inputStyle,
+        ]
         : [
-            style.inputPlusMinus,
-            {
-              width: inputWidth,
-              height: totalHeight,
-              fontSize: fontSize,
-              color: textColor,
-              borderRightWidth: sepratorWidth,
-              borderLeftWidth: sepratorWidth,
-              borderLeftColor: borderColor,
-              borderRightColor: borderColor,
-            },
-            this.props.inputStyle,
-          ];
+          style.inputPlusMinus,
+          {
+            width: inputWidth,
+            height: totalHeight,
+            fontSize: fontSize,
+            color: textColor,
+            borderRightWidth: sepratorWidth,
+            borderLeftWidth: sepratorWidth,
+            borderLeftColor: borderColor,
+            borderRightColor: borderColor,
+          },
+          this.props.inputStyle,
+        ];
     const upDownStyle = [
       {
         alignItems: "center",
@@ -327,9 +327,9 @@ export default class NumericInput extends Component {
       },
       this.props.rounded
         ? {
-            borderTopRightRadius: borderRadiusTotal,
-            borderBottomRightRadius: borderRadiusTotal,
-          }
+          borderTopRightRadius: borderRadiusTotal,
+          borderBottomRightRadius: borderRadiusTotal,
+        }
         : {},
     ];
     const rightButtonStyle = [
@@ -346,9 +346,9 @@ export default class NumericInput extends Component {
       },
       this.props.rounded
         ? {
-            borderTopRightRadius: borderRadiusTotal,
-            borderBottomRightRadius: borderRadiusTotal,
-          }
+          borderTopRightRadius: borderRadiusTotal,
+          borderBottomRightRadius: borderRadiusTotal,
+        }
         : {},
     ];
     const leftButtonStyle = [
@@ -365,9 +365,9 @@ export default class NumericInput extends Component {
       },
       this.props.rounded
         ? {
-            borderTopLeftRadius: borderRadiusTotal,
-            borderBottomLeftRadius: borderRadiusTotal,
-          }
+          borderTopLeftRadius: borderRadiusTotal,
+          borderBottomLeftRadius: borderRadiusTotal,
+        }
         : {},
     ];
     const inputWraperStyle = {
@@ -430,7 +430,7 @@ export default class NumericInput extends Component {
         <View style={inputContainerStyle}>
           <Button onPress={this.dec} style={leftButtonStyle}>
             <Icon
-              name="md-remove"
+              name="remove-circle"
               size={fontSize}
               style={[
                 ...iconStyle,
@@ -452,7 +452,7 @@ export default class NumericInput extends Component {
           </TouchableOpacity>
           <Button onPress={this.inc} style={rightButtonStyle}>
             <Icon
-              name="md-add"
+              name="add-circle"
               size={fontSize}
               style={[
                 ...iconStyle,
@@ -558,6 +558,6 @@ NumericInput.defaultProps = {
   reachMaxDecIconStyle: {},
   reachMinIncIconStyle: {},
   reachMinDecIconStyle: {},
-  onLimitReached: (isMax, msg) => {},
+  onLimitReached: (isMax, msg) => { },
   extraTextInputProps: {},
 };
