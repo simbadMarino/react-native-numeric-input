@@ -21,17 +21,16 @@
     "numeric"
   ],
   "author": "Onur Kantar <onur.kantar@logo.com.tr>",
-  "homepage": "https://github.com/onurkantar/diva-mobile-numeric-input",
+  "homepage": "https://github.com/simbadMarino/react-native-numeric-input",
   "bugs": {
-    "url": "https://github.com/onurkantar/diva-mobile-numeric-input/issues"
+    "url": "https://github.com/simbadMarino/react-native-numeric-input/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/onurkantar/diva-mobile-numeric-input.git"
+    "url": "git://github.com/simbadMarino/react-native-numeric-input.git"
   },
   "license": "MIT",
   "dependencies": {
-    "prop-types": "^15.8.1",
     "react-native-pixel-perfect": "^1.0.2"
   },
   "peerDependencies": {

@@ -502,6 +502,7 @@ const style = StyleSheet.create({
     paddingRight: calcSize(15),
   },
 });
+/*
 NumericInput.propTypes = {
   iconSize: PropTypes.number,
   borderColor: PropTypes.string,
@@ -560,4 +561,4 @@ NumericInput.defaultProps = {
   reachMinDecIconStyle: {},
   onLimitReached: (isMax, msg) => { },
   extraTextInputProps: {},
-};
+};*/
