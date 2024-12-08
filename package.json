@@ -1,5 +1,5 @@
 {
-  "name": "diva-mobile-numeric-input",
+  "name": "react-native-mobile-numeric-input",
   "version": "1.1.0",
   "description": "a stylish numeric input for react native",
   "main": "index.js",
